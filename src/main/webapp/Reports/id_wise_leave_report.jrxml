@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_wise_leave_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6ddc96cc-9465-42c2-9b82-4830050f154a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     leave_report.`leave_id` AS leave_report_leave_id,
+     leave_report.`employee_id` AS leave_report_employee_id,
+     leave_report.`employee_name` AS leave_report_employee_name,
+     leave_report.`employee_department` AS leave_report_employee_department,
+     leave_report.`leave_from` AS leave_report_leave_from,
+     leave_report.`leave_to` AS leave_report_leave_to,
+     leave_report.`reason_for_leave` AS leave_report_reason_for_leave,
+     leave_report.`leave_status` AS leave_report_leave_status
+FROM
+     `leave_report` leave_report
+where
+leave_id = $P{id};]]>
+	</queryString>
+	<field name="leave_report_leave_id" class="java.lang.Integer"/>
+	<field name="leave_report_employee_id" class="java.lang.String"/>
+	<field name="leave_report_employee_name" class="java.lang.String"/>
+	<field name="leave_report_employee_department" class="java.lang.String"/>
+	<field name="leave_report_leave_from" class="java.lang.String"/>
+	<field name="leave_report_leave_to" class="java.lang.String"/>
+	<field name="leave_report_reason_for_leave" class="java.lang.String"/>
+	<field name="leave_report_leave_status" class="java.lang.String"/>
+	<group name="leave_report_leave_id">
+		<groupExpression><![CDATA[$F{leave_report_leave_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="344" y="30" width="100" height="20" uuid="2ec66ec5-e6bf-4742-9bcf-c61a2ca00f84"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="35" height="20" uuid="aabeccdc-c803-41f7-bd54-ab2891fb31b5"/>
+				<text><![CDATA[Sr_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="0" width="49" height="20" uuid="4d3a55b0-0b7d-4128-9fdc-f7e37f79dfe7"/>
+				<text><![CDATA[Emp_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="0" width="116" height="20" uuid="18de0971-cf26-4ad1-9c61-312cb47698f6"/>
+				<text><![CDATA[Emp_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="123" height="20" uuid="23625736-8617-4829-ae9d-45dea889fcae"/>
+				<text><![CDATA[emp_depart]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="0" width="67" height="20" uuid="1ec8a536-6b79-4a9e-8fc3-9243d1bb978a"/>
+				<text><![CDATA[leave_from]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="65" height="20" uuid="f64ac07e-f040-4568-9ba6-7f9fa94bcab5"/>
+				<text><![CDATA[Leave_to]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="123" height="20" uuid="a88567d5-c6ce-4c32-b1fa-314ca70034a7"/>
+				<text><![CDATA[leave_reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="578" y="0" width="118" height="20" uuid="67af055b-a6b9-49d7-8a5a-f3c62ae7f6bd"/>
+				<text><![CDATA[leave_status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="77" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="46" height="20" uuid="cb207e9e-0605-4a02-9753-81a2bd2164cd"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="0" width="38" height="20" uuid="49073f76-3660-4a0e-84f2-d15a9c98721a"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="116" height="20" uuid="c24d250f-5fdc-4f13-bdad-23bb6ed7ea76"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="123" height="20" uuid="bf8ebc86-65af-4ed1-a525-92d8ff7a0919"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="0" width="67" height="20" uuid="2777014a-2fab-4a96-8ca7-457b29362912"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="65" height="20" uuid="f01483e1-dcb3-44d3-9d67-47b650e94d0e"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_to}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="123" height="20" uuid="fc6d74c2-7fce-4d35-8b57-5a67c9ef0786"/>
+				<textFieldExpression><![CDATA[$F{leave_report_reason_for_leave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="578" y="0" width="118" height="20" uuid="9f15d08b-e046-49ed-966c-66412a15ac4c"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

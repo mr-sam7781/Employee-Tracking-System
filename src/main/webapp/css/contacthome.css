@@ -1,0 +1,92 @@
+@charset "ISO-8859-1";
+
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #009698;
+  padding: 10px 0;
+  height: 50px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+ margin: 15px 20px; 
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav ul li a:hover {
+	color: black;
+}
+.contactdiv{
+	
+        height: 470px;
+        width: 60%;
+        background-color: #afeeee       ;
+        box-shadow: 0 0 25px darkslategray;
+        border-radius: 8px;
+        margin-top: 4%;
+        margin-left: 20%;
+     
+}
+.contactdiv1{
+	    height: 390px;
+        width: 30%;
+        background-color: #40e0d0 ;
+        box-shadow: 0 0 25px darkslategray;
+        border-radius: 8px;
+        margin-top: -29%;
+        margin-left: 10%;
+}
+.h1 {
+	margin-left: 60%;
+	font-size: 30px;
+	margin-top: 5%;
+}
+p{
+	margin-left: 57%;
+}
+.input1 {
+	margin-left: 45%;
+	margin-top: 3%;
+	width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+	  background: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 7px;
+      margin-left: 45%;
+      width: 80px;
+}
+button:hover {
+            background: #555;
+ }
+ .h2 {
+	 margin-left: 30%;
+	 font-size: 30px;
+ }
+ .st1 {
+	 margin-left: 30px;
+ }
+ .cimg {
+	 height: 100%;
+ }

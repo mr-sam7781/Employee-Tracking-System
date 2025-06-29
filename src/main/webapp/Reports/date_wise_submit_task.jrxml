@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="date_wise_submit_task" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0731c1b6-3da8-469c-859c-2db7393ba693">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="date" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tasksubmitformemp.`tasksubmitformemp` AS tasksubmitformemp_tasksubmitformemp,
+     tasksubmitformemp.`task_title` AS tasksubmitformemp_task_title,
+     tasksubmitformemp.`emp_name` AS tasksubmitformemp_emp_name,
+     tasksubmitformemp.`department_name` AS tasksubmitformemp_department_name,
+     tasksubmitformemp.`employee_id` AS tasksubmitformemp_employee_id,
+     tasksubmitformemp.`task_completed_file` AS tasksubmitformemp_task_completed_file,
+     tasksubmitformemp.`submit_date` AS tasksubmitformemp_submit_date
+FROM
+     `tasksubmitformemp` tasksubmitformemp
+where
+
+submit_date = $P{date};
+]]>
+	</queryString>
+	<field name="tasksubmitformemp_tasksubmitformemp" class="java.lang.Integer"/>
+	<field name="tasksubmitformemp_task_title" class="java.lang.String"/>
+	<field name="tasksubmitformemp_emp_name" class="java.lang.String"/>
+	<field name="tasksubmitformemp_department_name" class="java.lang.String"/>
+	<field name="tasksubmitformemp_employee_id" class="java.lang.String"/>
+	<field name="tasksubmitformemp_task_completed_file" class="java.lang.String"/>
+	<field name="tasksubmitformemp_submit_date" class="java.lang.String"/>
+	<group name="tasksubmitformemp_tasksubmitformemp">
+		<groupExpression><![CDATA[$F{tasksubmitformemp_tasksubmitformemp}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="382" y="32" width="100" height="20" uuid="7d5328a5-73ae-4bb1-8fa8-c5919375f893"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[date_wise_submit_task]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="fc68d731-b038-4359-87a6-c20577190c7c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[sr no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="114" height="20" uuid="a010a218-e3c0-4ca5-aa34-806d91a2309e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[task_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="114" height="20" uuid="9597aa5a-f3a9-4b46-a786-506ea3729118"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="0" width="114" height="20" uuid="b3b0f29c-d929-4fd5-97a4-5c3b80308594"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[department_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="114" height="20" uuid="35ea329f-3a2d-44e6-a9ec-59caa42f424a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="114" height="20" uuid="63a0ea60-47c2-433d-932b-18c7d69f9de5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[task_completed_file]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="0" width="114" height="20" uuid="920b7c4b-9744-4c6f-ab64-56310bf03f45"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[submit_date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="728" height="1" uuid="6d9bc37e-2de7-4076-9b44-375b059865bb"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="1b8a36c1-9739-4320-abb7-8f5e5635daea"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_tasksubmitformemp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="114" height="20" uuid="aacb93cf-ff0b-4d2b-a461-457ba303a5dc"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_task_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="114" height="20" uuid="f5f930aa-659e-46c6-8f48-3fe39e537b46"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="114" height="20" uuid="14028a87-5d7a-4801-b164-cf053602d50b"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_department_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="0" width="114" height="20" uuid="e102cd24-71b0-4928-8884-c8b5d151d765"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="114" height="20" uuid="8cff1c78-1c5f-4ad8-a9a8-d000da052cf1"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_task_completed_file}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="614" y="0" width="114" height="20" uuid="405f00ab-bc63-46af-b70c-29e0b852e12b"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_submit_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

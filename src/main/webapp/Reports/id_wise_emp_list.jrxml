@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_wise_emp_list" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3d573b08-ad02-4067-ba59-cebaf3c11300">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     addemp.`AddEMP` AS addemp_AddEMP,
+     addemp.`employee_id` AS addemp_employee_id,
+     addemp.`department_name` AS addemp_department_name,
+     addemp.`employee_name` AS addemp_employee_name,
+     addemp.`employee_password` AS addemp_employee_password,
+     addemp.`employee_email` AS addemp_employee_email,
+     addemp.`employee_contact` AS addemp_employee_contact,
+     addemp.`employee_city` AS addemp_employee_city,
+     addemp.`employee_dob` AS addemp_employee_dob,
+     addemp.`employee_doj` AS addemp_employee_doj,
+     addemp.`employee_pic` AS addemp_employee_pic,
+     addemp.`employee_gender` AS addemp_employee_gender
+FROM
+     `addemp` addemp
+where
+
+employee_id = $P{id};]]>
+	</queryString>
+	<field name="addemp_AddEMP" class="java.lang.Integer"/>
+	<field name="addemp_employee_id" class="java.lang.String"/>
+	<field name="addemp_department_name" class="java.lang.String"/>
+	<field name="addemp_employee_name" class="java.lang.String"/>
+	<field name="addemp_employee_password" class="java.lang.String"/>
+	<field name="addemp_employee_email" class="java.lang.String"/>
+	<field name="addemp_employee_contact" class="java.lang.Long"/>
+	<field name="addemp_employee_city" class="java.lang.String"/>
+	<field name="addemp_employee_dob" class="java.lang.String"/>
+	<field name="addemp_employee_doj" class="java.lang.String"/>
+	<field name="addemp_employee_pic" class="java.lang.String"/>
+	<field name="addemp_employee_gender" class="java.lang.String"/>
+	<group name="addemp_AddEMP">
+		<groupExpression><![CDATA[$F{addemp_AddEMP}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="309" y="28" width="204" height="25" uuid="0fdc1303-3e86-4e1f-98d5-56803c2307c5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[                       Employee_List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="4efe859c-24ba-487f-b225-46a47f6a1a96"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="47" height="20" uuid="07ae3ff6-ce7d-4323-abb8-ab9bbf69c093"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Emp_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="0" width="121" height="20" uuid="d9810504-3c47-42df-8b19-051fa4da12d0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Depart_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="0" width="99" height="20" uuid="15e73716-cd88-4127-9c6d-ccca360f5619"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Emp_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="0" width="39" height="20" uuid="581ce117-10c0-4f9f-b171-059280356884"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[pass]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="0" width="151" height="20" uuid="87a7fd2c-bf8e-41e0-997e-142b72b71e87"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="0" width="66" height="20" uuid="ae0ee444-a85f-4725-9b13-a87e9adc45b5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[cont_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="553" y="1" width="52" height="20" uuid="e7e58e09-bed3-4a72-950a-440f364d11de"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_dob]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="631" y="0" width="60" height="20" uuid="ee68df75-bcc8-4870-a1db-032ead2d243e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_doj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="691" y="0" width="46" height="20" uuid="31d6943d-671e-4592-aacb-1e42dce8a66a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_pic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="737" y="0" width="65" height="20" uuid="686d21f5-5fdc-469e-b5dd-feaad08a3ee6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_gender]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="3d7dd8bf-952f-46da-92c9-e3e65a1d5f23"/>
+			</line>
+			<staticText>
+				<reportElement x="605" y="0" width="26" height="20" uuid="12b384f4-a4a6-40e6-8e6d-0a076a8371e1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[city]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="20" uuid="923b8723-81ce-44ca-991d-21d5909262d4"/>
+				<textFieldExpression><![CDATA[$F{addemp_AddEMP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="47" height="20" uuid="d4704cfe-8217-4c50-b1c5-70d9537be55a"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="0" width="121" height="20" uuid="a795c006-7009-423d-90fe-dc4ce29c8f9d"/>
+				<textFieldExpression><![CDATA[$F{addemp_department_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="99" height="20" uuid="240c9a85-ac23-4b29-8840-55e59f51fc5f"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="0" width="39" height="20" uuid="f7d10251-617b-4737-a1af-1896ca8a7ada"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="0" width="151" height="20" uuid="a3210e49-fb58-40e5-9bc3-74d9254deeeb"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="0" width="66" height="20" uuid="6b2d4d10-0602-42cc-834e-83f9c09bc202"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="605" y="0" width="26" height="20" uuid="b58a6e7c-dbe4-4e61-a955-d7b4ae6e82ea"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="553" y="0" width="52" height="20" uuid="4ba2ec59-f2cb-4b25-94e5-5d207583b98a"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="631" y="0" width="60" height="20" uuid="eda6e2fe-6fd8-4d5f-aea7-50b6437f5092"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_doj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="691" y="0" width="46" height="20" uuid="fcfaab86-9d71-400b-9817-7617c0ff65dd"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_pic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="737" y="0" width="66" height="20" uuid="cab6e30c-583e-4cf4-ae9e-5e9b4bf5a2e8"/>
+				<textFieldExpression><![CDATA[$F{addemp_employee_gender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="35" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="41" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

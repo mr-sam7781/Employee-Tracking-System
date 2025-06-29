@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+  body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #48d1cc,#a6e7ff, #08e8de);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #add8e6;
+  padding: 20px;
+  box-shadow: 0 0 25px darkslategray;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.employeepic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+.infogroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infobox {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.employeepic {
+	height: 90px;
+	width: 90px;
+	margin-left: 35%;
+	
+}

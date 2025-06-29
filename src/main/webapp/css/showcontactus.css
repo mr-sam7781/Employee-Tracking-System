@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+
+ body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #48d1cc,#a6e7ff, #08e8de);
+}
+
+.container {
+  background-color: #add8e6;
+  padding: 20px;
+  box-shadow: 0 0 25px darkslategray;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 100%;
+  margin-top: 7%;
+
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid black;
+  text-align: left;
+}
+
+th {
+  background-color: #4682b4;
+  color: white;
+}
+.topnav {
+            width: 100%;
+            background-color: #008b8b;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            
+             box-shadow: 0 0 25px darkslategray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .topnav a, .dropdown-btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+        }
+
+        .topnav a:hover, .dropdown-btn:hover {
+            background-color: #0abab5;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #008b8b;
+            min-width: 200px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0abab5;
+        }
+
+        /* Show dropdown when active */
+        .dropdown.active .dropdown-content {
+            display: block;
+        }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_wise_depart" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a219c748-7aa9-48db-91ff-046038f84481">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     newdepart.`employee_Newdepart` AS newdepart_employee_Newdepart,
+     newdepart.`add_department` AS newdepart_add_department
+FROM
+     `newdepart` newdepart]]>
+	</queryString>
+	<field name="newdepart_employee_Newdepart" class="java.lang.Integer"/>
+	<field name="newdepart_add_department" class="java.lang.String"/>
+	<group name="newdepart_employee_Newdepart">
+		<groupExpression><![CDATA[$F{newdepart_employee_Newdepart}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" uuid="9d7d1cc2-3c42-4416-8deb-20f244bf538e"/>
+				<text><![CDATA[Sr_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="401" height="20" uuid="32823a7e-d8e8-40a1-b665-1ae2c303bb84"/>
+				<text><![CDATA[Department_Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="08dc8865-e4f6-467a-b63d-386092b15505"/>
+				<textFieldExpression><![CDATA[$F{newdepart_employee_Newdepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="401" height="20" uuid="6fb4550b-7b55-4b9e-bd99-e0b6c87cd0a6"/>
+				<textFieldExpression><![CDATA[$F{newdepart_add_department}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="36" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="35" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

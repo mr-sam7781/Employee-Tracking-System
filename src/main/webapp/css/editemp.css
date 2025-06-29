@@ -1,0 +1,56 @@
+@charset "ISO-8859-1";
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: linear-gradient(to right, #48d1cc,#a6e7ff, #08e8de);
+}
+
+.container{
+	background-color: #add8e6;
+	padding: 15px;
+	border-radius: 10px;
+	width: 60%;
+	box-shadow: 0 0 50px darkslategray;
+	margin-left: 20%;
+}
+.addemp{
+	
+	border-bottom: 3px solid black;
+}
+form .container2{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form .container2 .inputbox{
+	width: calc(100%/2 - 50px);
+	margin: 10px;
+}
+form .container2 .inputbox input, .input{
+	height: 35px;
+	width: 100%;
+	
+	
+}
+.sub{
+	width: 15%;
+	text-align: center;
+	font-size: 20px;
+	background-color: #00b7eb;
+	border: none;
+	margin-left: 40%;
+	margin-bottom: 2rem;
+	box-shadow: 0 0 5px darkslategray;
+}
+.addemp {
+	font-size: 20px;
+}
+
+.container2 .inputbox input, .input{
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid black;	
+}

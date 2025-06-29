@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="date_wise_task" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d03cba1-818d-4f6b-9815-de3f370358bd">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="date" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     task.`task_id` AS task_task_id,
+     task.`department_name` AS task_department_name,
+     task.`employee_id` AS task_employee_id,
+     task.`employee_name` AS task_employee_name,
+     task.`task_priority` AS task_task_priority,
+     task.`task_title` AS task_task_title,
+     task.`task_description` AS task_task_description,
+     task.`task_document` AS task_task_document,
+     task.`task_submit_last_date` AS task_task_submit_last_date,
+     task.`percentage` AS task_percentage,
+     task.`taskstatus` AS task_taskstatus,
+     task.`assigned_date` AS task_assigned_date
+FROM
+     `task` task
+where
+
+assigned_date = $P{date}]]>
+	</queryString>
+	<field name="task_task_id" class="java.lang.Integer"/>
+	<field name="task_department_name" class="java.lang.String"/>
+	<field name="task_employee_id" class="java.lang.String"/>
+	<field name="task_employee_name" class="java.lang.String"/>
+	<field name="task_task_priority" class="java.lang.String"/>
+	<field name="task_task_title" class="java.lang.String"/>
+	<field name="task_task_description" class="java.lang.String"/>
+	<field name="task_task_document" class="java.lang.String"/>
+	<field name="task_task_submit_last_date" class="java.lang.String"/>
+	<field name="task_percentage" class="java.lang.String"/>
+	<field name="task_taskstatus" class="java.lang.String"/>
+	<field name="task_assigned_date" class="java.lang.String"/>
+	<group name="task_task_id">
+		<groupExpression><![CDATA[$F{task_task_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="360" y="33" width="100" height="20" uuid="0b82b96e-3c4c-4864-9e28-c433f40bccf2"/>
+				<text><![CDATA[Date_Wise_Task]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="0" width="80" height="20" uuid="fe555191-49d2-4efc-b804-c116e3aeb683"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Task_document]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="0" width="74" height="20" uuid="fb9cd1b4-548f-44b9-b7a6-b026f9a2bd11"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="0" width="66" height="20" uuid="a2c37551-1a6b-48a5-982c-7cc0c83a1550"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[priority]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="0" width="66" height="20" uuid="ea98eedc-bd0e-4f56-8d61-c63540878ac2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[submit_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="91" height="20" uuid="b99742fd-d9f1-4309-8def-69830be26d8d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="0" width="66" height="20" uuid="4dae53d0-fe71-411d-a950-1095a8843c18"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="0" width="53" height="20" uuid="5deefcfc-ce97-4475-a7b9-b8926a854eb6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[percentage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="0" width="66" height="20" uuid="f086c42b-c9ca-47e3-a41c-5994edf6fd45"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="668" y="0" width="51" height="20" uuid="d9ba6822-3eb1-4d8c-b2df-bdeae6d549fd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[taskstatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="719" y="0" width="83" height="20" uuid="b730e9bc-6c83-4007-a191-90e8e10e9bdf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[assigned_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="32" height="20" uuid="6e161de8-7ca2-4cf8-914b-12a05750d9a7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr no]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="94ca76e7-357f-4034-9957-60a48016c852"/>
+			</line>
+			<staticText>
+				<reportElement x="409" y="0" width="74" height="20" uuid="0c27d529-bba3-4916-afdf-d2fb25ab67ce"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[task_title]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="32" y="0" width="66" height="20" uuid="06c0a147-8960-4789-8ecd-67912f9dc519"/>
+				<textFieldExpression><![CDATA[$F{task_task_document}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="0" width="88" height="20" uuid="8ee7042c-f287-46f2-9ba2-7c1eef68a24b"/>
+				<textFieldExpression><![CDATA[$F{task_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="66" height="20" uuid="1a4f7cd1-1e02-41e9-b8ba-e5c25760bb3e"/>
+				<textFieldExpression><![CDATA[$F{task_task_priority}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="0" width="66" height="20" uuid="4d5a5953-d60d-4a97-884c-b185b52eacbc"/>
+				<textFieldExpression><![CDATA[$F{task_task_submit_last_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="91" height="20" uuid="3a8c9cf5-bced-449b-a5e8-68fbb408476f"/>
+				<textFieldExpression><![CDATA[$F{task_department_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="32" height="20" uuid="b1065447-a052-457e-ad0f-70fb568858c3"/>
+				<textFieldExpression><![CDATA[$F{task_task_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="0" width="74" height="20" uuid="fe3cd0e2-30cb-411a-a9fb-7429e40e301c"/>
+				<textFieldExpression><![CDATA[$F{task_task_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="0" width="66" height="20" uuid="1a7be533-3db4-4bf6-b935-be9698420faf"/>
+				<textFieldExpression><![CDATA[$F{task_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="53" height="20" uuid="bbf63005-ca0b-445e-84aa-bd9eee3ad52e"/>
+				<textFieldExpression><![CDATA[$F{task_percentage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="0" width="66" height="20" uuid="0dc11e7a-6af2-4026-9131-3558314a9bc3"/>
+				<textFieldExpression><![CDATA[$F{task_task_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="668" y="0" width="51" height="20" uuid="d966cd22-295e-4fde-9256-80ebdfad3101"/>
+				<textFieldExpression><![CDATA[$F{task_taskstatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="719" y="0" width="83" height="20" uuid="cdf10202-f1f4-45d5-839c-96fe1248d059"/>
+				<textFieldExpression><![CDATA[$F{task_assigned_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

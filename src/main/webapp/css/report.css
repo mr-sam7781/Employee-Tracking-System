@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+     body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }

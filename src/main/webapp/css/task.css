@@ -1,0 +1,131 @@
+@charset "ISO-8859-1";
+
+body {
+  
+       padding: 0;
+       box-sizing: border-box;
+      margin: 0;
+  	 background: linear-gradient(to right, #48d1cc,#a6e7ff, #08e8de);
+
+} 
+
+.container {
+    background-color: #add8e6;
+    box-shadow: 0 0 50px darkslategray;
+    padding: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.row {
+     display: flex;
+     justify-content: space-between;
+     margin-left: 5%;
+     margin-right: 5%;
+}
+.subcontainer {
+       margin-bottom: 15px;
+       width: 40%;
+}
+.subcontainer label {
+      display: block;
+      margin-bottom: 5px;
+}
+.subcontainer input,
+.subcontainer select,
+.subcontainer textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      border: 1px solid black;
+       border-radius: 4px;
+}
+.subcontainer input[type="file"] {
+    padding: 3px;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+ }
+.subcontainer input[type="submit"] {
+     font-size: 15px;
+     background-color: #00b7eb;
+     color: black;
+     border: none;
+     margin-left: 90%;
+     border-radius: 4px;
+     margin-top: 15%;
+     width: 65%;
+  }
+  
+  
+  
+  
+  
+  
+  .topnav {
+            width: 100%;
+            background-color: #008b8b;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            
+             box-shadow: 0 0 25px darkslategray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .topnav a, .dropdown-btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+        }
+
+        .topnav a:hover, .dropdown-btn:hover {
+            background-color: #0abab5;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #008b8b;
+            min-width: 200px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0abab5;
+        }
+
+        /* Show dropdown when active */
+        .dropdown.active .dropdown-content {
+            display: block;
+        }

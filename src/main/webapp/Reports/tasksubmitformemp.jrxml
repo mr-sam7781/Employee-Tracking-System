@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tasksubmitformemp" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2d3babf-3df1-4155-a9e2-d29704d69495">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tasksubmitformemp.`tasksubmitformemp` AS tasksubmitformemp_tasksubmitformemp,
+     tasksubmitformemp.`task_title` AS tasksubmitformemp_task_title,
+     tasksubmitformemp.`emp_name` AS tasksubmitformemp_emp_name,
+     tasksubmitformemp.`department_name` AS tasksubmitformemp_department_name,
+     tasksubmitformemp.`employee_id` AS tasksubmitformemp_employee_id,
+     tasksubmitformemp.`task_completed_file` AS tasksubmitformemp_task_completed_file,
+     tasksubmitformemp.`submit_date` AS tasksubmitformemp_submit_date
+FROM
+     `tasksubmitformemp` tasksubmitformemp]]>
+	</queryString>
+	<field name="tasksubmitformemp_tasksubmitformemp" class="java.lang.Integer"/>
+	<field name="tasksubmitformemp_task_title" class="java.lang.String"/>
+	<field name="tasksubmitformemp_emp_name" class="java.lang.String"/>
+	<field name="tasksubmitformemp_department_name" class="java.lang.String"/>
+	<field name="tasksubmitformemp_employee_id" class="java.lang.String"/>
+	<field name="tasksubmitformemp_task_completed_file" class="java.lang.String"/>
+	<field name="tasksubmitformemp_submit_date" class="java.lang.String"/>
+	<group name="tasksubmitformemp_tasksubmitformemp">
+		<groupExpression><![CDATA[$F{tasksubmitformemp_tasksubmitformemp}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="372" y="34" width="100" height="20" uuid="083e0b60-2dee-4593-bd8e-cc9ec7dda6f5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Competeded all task]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="48" height="20" uuid="964d938b-3345-4495-a49b-d44a43cd67c2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="0" width="66" height="20" uuid="080ef125-74ac-4e37-b568-7809e1b6844a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[task_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="d43490c7-d46f-48ae-997f-250157a30572"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emp_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="1e4f6ce8-47cf-4e02-85c8-0beb4fa13474"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Emp_department_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="ef23658d-77b5-4c70-974d-475b82fcf24e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="0f9964be-3a82-46d8-abc2-28edfd65bee4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[task_completed_file]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="1009ac10-0bd5-4159-8918-3f66aa4d50cc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Task_submit_date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="48" height="20" uuid="0365197e-e43f-4ed7-a6d7-ccccfb4488c0"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_tasksubmitformemp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="0" width="66" height="20" uuid="4b3c64cf-7c57-489f-ab1b-c9baf5f91117"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_task_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="1ec3b883-b643-4e45-ac8c-060ffa8984ba"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="8e74e258-1f05-4d3d-bd60-6b6e5990e20b"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_department_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="ed0fb9d0-2929-49df-997f-4a176a1fb87d"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="521c3362-eaf7-4a0e-b1bc-23309ceecb2b"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_task_completed_file}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="5b4f93a4-4f6e-4a7b-bf4e-95ca0a71afb9"/>
+				<textFieldExpression><![CDATA[$F{tasksubmitformemp_submit_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

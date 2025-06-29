@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bitwise_leave" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7386265d-3d61-4e2c-9411-a5804b665412">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     leave_report.`leave_id` AS leave_report_leave_id,
+     leave_report.`employee_id` AS leave_report_employee_id,
+     leave_report.`employee_name` AS leave_report_employee_name,
+     leave_report.`employee_department` AS leave_report_employee_department,
+     leave_report.`leave_from` AS leave_report_leave_from,
+     leave_report.`leave_to` AS leave_report_leave_to,
+     leave_report.`reason_for_leave` AS leave_report_reason_for_leave,
+     leave_report.`leave_status` AS leave_report_leave_status
+FROM
+     `leave_report` leave_report]]>
+	</queryString>
+	<field name="leave_report_leave_id" class="java.lang.Integer"/>
+	<field name="leave_report_employee_id" class="java.lang.String"/>
+	<field name="leave_report_employee_name" class="java.lang.String"/>
+	<field name="leave_report_employee_department" class="java.lang.String"/>
+	<field name="leave_report_leave_from" class="java.lang.String"/>
+	<field name="leave_report_leave_to" class="java.lang.String"/>
+	<field name="leave_report_reason_for_leave" class="java.lang.String"/>
+	<field name="leave_report_leave_status" class="java.lang.String"/>
+	<group name="leave_report_leave_id">
+		<groupExpression><![CDATA[$F{leave_report_leave_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="34" width="100" height="20" uuid="cdcf65b7-b9ef-4b80-8e35-3cccca24f605"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[date_leave]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="20" uuid="28207ab8-2325-4934-8868-35d60ecaf644"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="72" height="20" uuid="a17c0647-3c83-4e72-afac-dc35c1995681"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="0" width="100" height="20" uuid="e8419e1c-a1f0-482e-a93c-7ef4b2cbfa6d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="0" width="112" height="20" uuid="a10ca97c-0ddb-420f-89ef-85dc9f912efe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[employee_department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="0" width="100" height="20" uuid="25c8ec45-2f1a-4200-bf98-fc014362f55e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[leave_from]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="524" y="0" width="146" height="20" uuid="36b50af7-fc9b-43b0-81c6-d6d6ae61b817"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[reason_for_leave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="0" width="130" height="20" uuid="88becb97-701a-48db-aafa-02fcfd3c1a64"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[leave_status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="800" height="1" uuid="89ef5642-1e49-4d11-bf89-cf260fa17a70"/>
+			</line>
+			<staticText>
+				<reportElement x="424" y="0" width="100" height="20" uuid="ae6db992-98b7-4f88-8d2e-66ad63bec846"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[leave_to]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="40" height="20" uuid="d99f95fd-205b-4085-b4f5-ab90a6c44c8f"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="72" height="20" uuid="8f062df7-646d-421e-88be-ea4a12a01d3b"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="100" height="20" uuid="1e450ace-40b2-412c-a24a-277519d319ee"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="112" height="20" uuid="0660b86b-f18c-460d-9538-3e5470a37222"/>
+				<textFieldExpression><![CDATA[$F{leave_report_employee_department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="0" width="100" height="20" uuid="7b319046-bce3-40a7-937b-6eb41f99cbd8"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="0" width="100" height="20" uuid="da99bd09-168c-4941-986c-a1b4125a2cb0"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_to}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="524" y="0" width="146" height="20" uuid="8a753009-1a23-42bf-9e79-ad303aff0c7a"/>
+				<textFieldExpression><![CDATA[$F{leave_report_reason_for_leave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="130" height="20" uuid="447975dd-165c-40a1-9245-93ed5bd1a5d1"/>
+				<textFieldExpression><![CDATA[$F{leave_report_leave_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="34" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
